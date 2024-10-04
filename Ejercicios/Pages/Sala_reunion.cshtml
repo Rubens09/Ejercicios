@@ -1,0 +1,84 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "";
+}
+<main class="content">
+	<div class="container-fluid p-0">
+		<h1 class="h3 mb-3"><strong>Reservas Sala de Reuniones</strong></h1>
+		<div class="row">
+			<div class="col-12 col-lg-12 col-xxl-9 d-flex">
+				<!-- Button trigger modal -->
+				<button type="button" class="btn btn-primary" id="btn_add_room">
+					Agregar Sala
+				</button>
+			</div>
+			<div class="col-12 col-lg-12 col-xxl-9 d-flex">
+				<div class="card flex-fill" id="div_add_room" style="display:none;">
+					<div class="card-header">
+						<h5 class="card-title mb-0"></h5>
+					</div>
+					<div class="row">
+						<div class="col-12 col-lg-6 col-xxl-9 d-flex mb-3">Nombre Sala</div>
+						<div class="col-12 col-lg-6 col-xxl-9 d-flex mb-3"><input type="text" class="form-control" id="name_new_room" /></div>
+						<div class="col-12 col-lg-6 col-xxl-9 d-flex mb-3">Capacidad</div>
+						<div class="col-12 col-lg-6 col-xxl-9 d-flex mb-3"><input type="number" min="0" value="0" class="form-control" id="number_new_room"></input></div>
+						<div class="col-12 col-lg-6 col-xxl-9 d-flex mb-3">Estado</div>
+						<div class="col-12 col-lg-6 col-xxl-9 d-flex mb-3">
+							<select class="form-select" id="status_new_room">
+								<option value="1">Disponible</option>
+								<option value="0">Ocupada</option>
+							</select>
+						</div>
+						<div class="col-12 col-lg-6 col-xxl-9 d-flex mb-3"></div>
+						<div class="col-12 col-lg-6 col-xxl-9 d-flex mb-3">
+							<button class="btn btn-success" id="btn_save_new_room" disabled="disabled">Guardar Sala</button>
+						</div>
+					</div>
+				</div>
+				<div class="card flex-fill" id="div_add_reserv" style="display:none;">
+					<div class="card-header">
+						<h5 class="card-title mb-0">Agregar Reservación</h5>
+					</div>
+					<div class="row">
+						<div class="col-12 col-lg-6 col-xxl-9 d-flex mb-3">Nombre Sala</div>
+						<div class="col-12 col-lg-6 col-xxl-9 d-flex mb-3" id="list_name_reserv_room"></div>
+						<div class="col-12 col-lg-6 col-xxl-9 d-flex mb-3">Fecha Inicio</div>
+						<div class="col-12 col-lg-6 col-xxl-9 d-flex mb-3"><input type="datetime-local" class="form-control" id="fecha_inicio_reserv_room"></input></div>
+						<div class="col-12 col-lg-6 col-xxl-9 d-flex mb-3">Fecha Final</div>
+						<div class="col-12 col-lg-6 col-xxl-9 d-flex mb-3"><input type="datetime-local" class="form-control" id="fecha_fin_reserv_room" disabled="disabled"></input></div>
+						<div class="col-12 col-lg-6 col-xxl-9 d-flex mb-3"></div>
+						<div class="col-12 col-lg-6 col-xxl-9 d-flex mb-3">
+							<button class="btn btn-success" id="btn_save_new_reserv" disabled="disabled">Guardar Reservación</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-lg-12 col-xxl-9 d-flex">
+				<div class="card flex-fill">
+					<div class="card-header">
+						<h5 class="card-title mb-0"></h5>
+					</div>
+					<table class="table table-hover my-0" id="tbl_list_room">
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th class="d-none d-xl-table-cell">Nombre Sala</th>
+								<th class="d-none d-xl-table-cell">Capacidad</th>
+								<th>Estado</th>
+								<th class="d-none d-md-table-cell">Fecha Creación</th>
+								<th>Editar</th>
+								<th>Eliminar</th>
+								<th>Reserva</th>
+								<th>Reservas</th>
+							</tr>
+						</thead>
+						<tbody id="tbody_list_room">
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+<script src="/js/sala_reunion.js"></script>

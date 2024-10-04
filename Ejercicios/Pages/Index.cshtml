@@ -1,0 +1,65 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<main class="content">
+	<div class="container-fluid p-0">
+		<h1 class="h3 mb-3"><strong>Gestor de Tareas</strong></h1>
+		<div class="row">
+			<div class="col-12 col-lg-12 col-xxl-9 d-flex">
+				<!-- Button trigger modal -->
+				<button type="button" class="btn btn-primary" id="btn_add_task">
+					Agregar Tarea
+				</button>
+			</div>
+			<div class="col-12 col-lg-12 col-xxl-9 d-flex">
+				<div class="card flex-fill" id="div_add_task" style="display:none;">
+					<div class="card-header">
+						<h5 class="card-title mb-0"></h5>
+					</div>
+					<div class="row">
+						<div class="col-12 col-lg-6 col-xxl-9 d-flex mb-3">Título</div>
+						<div class="col-12 col-lg-6 col-xxl-9 d-flex mb-3"><input type="text" class="form-control" id="title_new_task"/></div>
+						<div class="col-12 col-lg-6 col-xxl-9 d-flex mb-3">Descripción</div>
+						<div class="col-12 col-lg-6 col-xxl-9 d-flex mb-3"><textarea class="form-control" id="description_new_task"></textarea></div>
+						<div class="col-12 col-lg-6 col-xxl-9 d-flex mb-3">Estado</div>
+						<div class="col-12 col-lg-6 col-xxl-9 d-flex mb-3">
+							<select class="form-select" id="status_new_task">
+								<option value="0">Pendiente</option>
+								<option value="1">Completada</option>
+							</select>
+						</div>
+						<div class="col-12 col-lg-6 col-xxl-9 d-flex mb-3"></div>
+						<div class="col-12 col-lg-6 col-xxl-9 d-flex mb-3">
+							<button class="btn btn-success" id="btn_save_new_task" disabled="disabled">Guardar Tarea</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-lg-12 col-xxl-9 d-flex">
+				<div class="card flex-fill">
+					<div class="card-header">
+						<h5 class="card-title mb-0"></h5>
+					</div>
+					<table class="table" id="tbl_list_task">
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>Título</th>
+								<th>Descripción</th>
+								<th>Estado</th>
+								<th>Fecha Creación</th>
+								<th>Editar</th>
+								<th>Eliminar</th>
+							</tr>
+						</thead>
+						<tbody id="tbody_list_task">
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+<script src="/js/index.js"></script>

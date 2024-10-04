@@ -1,0 +1,57 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "";
+}
+<main class="content">
+	<div class="container-fluid p-0">
+		<h1 class="h3 mb-3"><strong>Blog</strong></h1>
+		<div class="row">
+			<div class="col-12 col-lg-12 col-xxl-9 d-flex">
+				<!-- Button trigger modal -->
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+					Agregar Artículo
+				</button>
+			</div>
+			<div class="col-12 col-lg-12 col-xxl-9 d-flex">
+				<div class="card flex-fill">
+					<div class="card-header">
+						<h5 class="card-title mb-0"></h5>
+					</div>
+					<div class="row">
+						<div class="col-12 col-lg-6 col-xxl-9 d-flex mb-3">Título</div>
+						<div class="col-12 col-lg-6 col-xxl-9 d-flex mb-3"><input type="text" class="form-control" /></div>
+						<div class="col-12 col-lg-6 col-xxl-9 d-flex mb-3">Contenido</div>
+						<div class="col-12 col-lg-6 col-xxl-9 d-flex mb-3"><textarea class="form-control"></textarea></div>
+						<div class="col-12 col-lg-6 col-xxl-9 d-flex mb-3"></div>
+						<div class="col-12 col-lg-6 col-xxl-9 d-flex mb-3">
+							<button class="btn btn-success">Guardar Reservación</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-lg-12 col-xxl-9 d-flex">
+				<div class="card flex-fill">
+					<div class="card-header">
+						<h5 class="card-title mb-0"></h5>
+					</div>
+					<table class="table table-hover my-0">
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th class="d-none d-xl-table-cell">Título</th>
+								<th class="d-none d-xl-table-cell">Contenido</th>
+								<th class="d-none d-md-table-cell">Fecha Creación</th>
+								<th>Editar</th>
+								<th>Eliminar</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</main>
